@@ -1,6 +1,6 @@
-#### INDICES
+#### INDICES (sieeenta!)
 
-# exclus„o das parcelas que contem somente um ou dois individuo - para calcular os indices È necessario no mÌnimo 3 indivÌduos
+# exclus√£o das parcelas que contem somente um ou dois individuo - para calcular os indices √© necessario no m√≠nimo 3 indiv√≠duos
 parc<-data.frame(table(atrib$quad))
 parc2<-parc[which(parc$Freq>2),]
 atrib2<-atrib[atrib$quad %in% parc2$Var1,]
@@ -19,7 +19,7 @@ for(i in 1:length(parcela))
 abund$Var2<-as.character(abund$Var2)
 abund$Var1<-as.character(abund$Var1)
 
-# Selecionando as subparcelas que possuem 80% de abund‚ncia das espÈcies coletadas
+# Selecionando as subparcelas que possuem 80% de abund√¢ncia das esp√©cies coletadas
 corte<-data.frame(parcela, m.spp=NA)
 especies<-as.factor(unique(atrib2$species))
 
@@ -118,49 +118,49 @@ dev.off()
 #####################################
 lm01<-lm(Comp.1~soil, data=pc.scores2)
 lm02<-update(lm01, .~. -soil)
-anova(lm01, lm02) # solo È significativo
+anova(lm01, lm02) # solo √© significativo
 AIC(lm01,lm02)
 qqnorm(pc.scores2[,1])
 qqline(pc.scores2[,1])
 
 lm03<-lm(Comp.2~soil, data=pc.scores2)
 lm04<-update(lm03, .~. -soil)
-anova(lm03, lm04) # solo n„o È significativo
+anova(lm03, lm04) # solo n√£o √© significativo
 qqnorm(pc.scores2[,2])
 qqline(pc.scores2[,2])
 
 lm05<-lm(Comp.3~soil, data=pc.scores2)
 lm06<-update(lm05, .~. -soil)
-anova(lm05, lm06) # solo n„o È significativo
+anova(lm05, lm06) # solo n√£o √© significativo
 qqnorm(pc.scores2[,3])
 qqline(pc.scores2[,3])
 
 lm07<-lm(Comp.4~soil, data=pc.scores2)
 lm08<-update(lm07, .~. -soil)
-anova(lm07, lm08) # solo n„o È significativo
+anova(lm07, lm08) # solo n√£o √© significativo
 qqnorm(pc.scores2[,4])
 qqline(pc.scores2[,4])
 
 lm09<-lm(Comp.5~soil, data=pc.scores2)
 lm10<-update(lm09, .~. -soil)
-anova(lm09, lm10) # solo n„o È significativo
+anova(lm09, lm10) # solo n√£o √© significativo
 qqnorm(pc.scores2[,5])
 qqline(pc.scores2[,5])
 
 lm11<-lm(Comp.6~soil, data=pc.scores2)
 lm12<-update(lm11, .~. -soil)
-anova(lm11, lm12) # solo n„o È significativo
+anova(lm11, lm12) # solo n√£o √© significativo
 qqnorm(pc.scores2[,6])
 qqline(pc.scores2[,6])
 
 lm13<-lm(Comp.7~soil, data=pc.scores2)
 lm14<-update(lm13, .~. -soil)
-anova(lm13, lm14) # solo n„o È significativo
+anova(lm13, lm14) # solo n√£o √© significativo
 qqnorm(pc.scores2[,7])
 qqline(pc.scores2[,7])
 
 lm15<-lm(Comp.8~soil, data=pc.scores2)
 lm16<-update(lm15, .~. -soil)
-anova(lm15, lm16) # solo n„o È significativo
+anova(lm15, lm16) # solo n√£o √© significativo
 qqnorm(pc.scores2[,8])
 qqline(pc.scores2[,8])
